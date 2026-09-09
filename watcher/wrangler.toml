@@ -1,0 +1,12 @@
+name = "nostr-sig-watcher"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+NEAR_RPC = "https://rpc.testnet.fastnear.com"
+RELAY_URLS = "wss://relay.primal.net,wss://nos.lol,wss://relay.damus.io"
+
+[durable_objects]
+bindings = [
+  { name = "RELAY_WATCHER", class_name = "RelayWatcher" }
+]
